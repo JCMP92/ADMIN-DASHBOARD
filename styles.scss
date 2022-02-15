@@ -1,0 +1,40 @@
+body{
+    display: grid;
+    max-height: 100vh;
+    background-color: red;
+    grid-template-columns: 15vw repeat(3, 1fr);
+    grid-template-rows:  23vh 1fr;
+    grid-template-areas: 
+    "sidebar header header header"
+    "sidebar main-c main-c announce"     
+    ;
+    
+}
+
+
+header{
+    display: flex;
+    background-color: bisque;
+    grid-area: header;
+}
+
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    grid-area: sidebar;
+
+}
+
+.main{
+    grid-area:  main-c;
+}
+
+.announcements-and-trend{
+    display: flex;
+    flex-direction: column;
+    grid-area: announce;
+}
+
+
