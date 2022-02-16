@@ -226,22 +226,57 @@ header {
   grid-area: main-c;
 }
 .main h2 {
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 .projects {
   display: grid;
   height: clamp(600px, 80%, 773px);
   width: clamp(830px, 70%, 1000px);
-  padding: 0 2rem;
-  grid-template-columns: repeat(2, clamp(400px, 30%, 500px));
-  grid-template-rows: repeat(3, clamp(200px, 30%, 300px));
+  padding: 0 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   column-gap: 3rem;
   row-gap: 2rem;
 }
 .projects .proj {
   background-color: #f5f0f3;
   box-shadow: 5px 10px 18px #888888;
+  border-radius: 2rem;
+  border-left: solid #EFA185;
+  border-width: 10px;
+  padding: 10px;
+}
+.projects .proj p {
+  font-size: 1rem;
+}
+.projects .proj div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  margin-top: 1rem;
+}
+.projects .proj div button {
+  background-color: #58404D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  width: 40px;
+  padding: 0 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.projects .proj div button:active {
+  transform: scale(0.94);
+}
+.projects .proj div button:hover {
+  background-color: #EFA185;
+}
+.projects .proj:hover {
+  border-left: solid #B3E8F0;
+  border-width: 10px;
+  transform: scale(1.05);
 }
 
 .announcements-and-trend {
