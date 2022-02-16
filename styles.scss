@@ -18,7 +18,7 @@
 //CSS NAVBAR------------------------------------------------------------------------------------------------------
 body{
     display: grid;
-    max-height: 100vh;
+    height: 100vh;
     background-color: var.$default-color;
     grid-template-columns: clamp(300px, 19%, 500px) repeat(3, clamp(330px, 27%, 1000px));
     grid-template-rows:  clamp(190px, 22vh, 200px) 1fr;
@@ -291,15 +291,15 @@ header{
 }
 
 
-
-
-
-
+//CSS ANNOUNCEMENTS--------------------------------------------------------------------------------------
 
 .announcements-and-trend{
     display: flex;
+    margin: auto;
     flex-direction: column;
     grid-area: announce;
+    width: clamp(400px, 33%, 600px);
+    padding: 2rem;
 }
 .trend{
     .each-trend{
@@ -310,5 +310,32 @@ header{
             @include click-button();
         }
     }
+}
+.announcements{
+    background-color: var.$default-color;
+    box-shadow: 5px 10px 18px #888888;
+    width: auto;
+    border-radius: 2rem;
+    padding: 5px;
+        p{
+            font-size: 0.8rem;
+        }
+        .announce{
+            border-width: 0.2px;
+            border-bottom: solid lightgray;
+        }
+}
+.trend{
+    background-color: var.$default-color;
+    box-shadow: 5px 10px 18px #888888;
+    width: auto;
+    border-radius: 2rem;
+    padding: 5px;
+
+    .each-trend{
+        display: flex;
+        padding: 5px ;
+    }
+
 }
 
