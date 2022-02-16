@@ -4,7 +4,7 @@
 
 body {
   display: grid;
-  max-height: 100vh;
+  height: 100vh;
   background-color: #f5f0f3;
   grid-template-columns: clamp(300px, 19%, 500px) repeat(3, clamp(330px, 27%, 1000px));
   grid-template-rows: clamp(190px, 22vh, 200px) 1fr;
@@ -281,8 +281,11 @@ header {
 
 .announcements-and-trend {
   display: flex;
+  margin: auto;
   flex-direction: column;
   grid-area: announce;
+  width: clamp(400px, 33%, 600px);
+  padding: 2rem;
 }
 
 .trend .each-trend img {
@@ -293,6 +296,33 @@ header {
 }
 .trend .each-trend img:active {
   transform: scale(0.94);
+}
+
+.announcements {
+  background-color: #f5f0f3;
+  box-shadow: 5px 10px 18px #888888;
+  width: auto;
+  border-radius: 2rem;
+  padding: 5px;
+}
+.announcements p {
+  font-size: 0.8rem;
+}
+.announcements .announce {
+  border-width: 0.2px;
+  border-bottom: solid lightgray;
+}
+
+.trend {
+  background-color: #f5f0f3;
+  box-shadow: 5px 10px 18px #888888;
+  width: auto;
+  border-radius: 2rem;
+  padding: 5px;
+}
+.trend .each-trend {
+  display: flex;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
