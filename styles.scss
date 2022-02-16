@@ -177,6 +177,12 @@ header{
     display: flex;
     align-items: center;
     color: rgb(255, 255, 255);
+    h1{
+        a{
+            color: rgb(255, 255, 255); 
+            text-decoration: none;
+        }
+    }
     img{
         height: 30px;
         width: 30px;
@@ -184,10 +190,47 @@ header{
     }
 }
 .list-container{
-    height: 80%;
+    height: auto;
+    width: 280px;
     display: flex;
     flex-direction: column;
     align-items: left;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.main-list{
+    span{
+        padding-left: 1rem;
+    }
+    a{
+        color: rgb(255, 255, 255);
+        text-decoration: none; 
+    }
+    a:hover{
+        color: var.$hover-color;
+    }
+    li{
+        list-style-type:none;
+        padding: 1rem 0;
+        @include click-button();
+    }
+}
+.settings{
+    span{
+        padding-left: 1rem;
+    }
+    a{
+        color: rgb(255, 255, 255); 
+        text-decoration: none;
+    } 
+    a:hover{
+        color: var.$hover-color;
+    }
+    li{
+        list-style-type:none;
+        padding: 1rem 0;
+        @include click-button();
+    } 
 }
 
 
