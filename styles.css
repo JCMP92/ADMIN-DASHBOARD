@@ -8,7 +8,7 @@ body {
   background-color: #f5f0f3;
   grid-template-columns: clamp(300px, 19%, 500px) repeat(3, clamp(330px, 27%, 1000px));
   grid-template-rows: clamp(190px, 22vh, 200px) 1fr;
-  grid-template-areas: "sidebar header header header" "sidebar main-c main-c announce";
+  grid-template-areas: "sidebar header header header" "sidebar main-c main-c main-c";
   font-size: 10px;
 }
 
@@ -25,7 +25,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2;
+  font-size: 0.8rem;
 }
 
 header {
@@ -222,22 +222,32 @@ header {
   transform: scale(0.94);
 }
 
-.main {
+.sub-grid {
   grid-area: main-c;
+  display: grid;
+  grid-template-columns: repeat(4, clamp(250px, 25%, 500px));
+  grid-template-rows: 1fr;
+  grid-template-areas: "proj proj proj side";
+}
+
+.main {
+  grid-area: proj;
+  display: grid;
+  grid-template-rows: 100px clamp(400px, 100%, 550px);
+  grid-template-areas: "title-your" "disp-proj ";
 }
 .main h2 {
+  grid-area: title-your;
   padding-left: 3rem;
 }
 
 .projects {
+  grid-area: disp-proj;
   display: grid;
-  height: clamp(600px, 80%, 773px);
-  width: clamp(830px, 70%, 1000px);
-  padding: 0 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 3rem;
-  row-gap: 2rem;
+  grid-template-columns: repeat(2, clamp(250px, 48%, 550px));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  padding: 0 2rem;
 }
 .projects .proj {
   background-color: #f5f0f3;
@@ -277,15 +287,14 @@ header {
   border-left: solid #B3E8F0;
   border-width: 10px;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .announcements-and-trend {
   display: flex;
-  margin: auto;
   flex-direction: column;
-  grid-area: announce;
-  width: clamp(400px, 33%, 600px);
-  padding: 2rem;
+  grid-area: side;
+  padding: 0 2rem;
 }
 
 .trend .each-trend img {
@@ -303,7 +312,7 @@ header {
   box-shadow: 5px 10px 18px #888888;
   width: auto;
   border-radius: 2rem;
-  padding: 5px;
+  padding: 1rem;
 }
 .announcements p {
   font-size: 0.8rem;
@@ -318,11 +327,21 @@ header {
   box-shadow: 5px 10px 18px #888888;
   width: auto;
   border-radius: 2rem;
-  padding: 5px;
+  padding: 1rem;
 }
 .trend .each-trend {
   display: flex;
-  padding: 5px;
+  padding: 5px 0;
+}
+.trend .each-trend .trend-col {
+  display: flex;
+  flex-direction: column;
+}
+.trend .each-trend .trend-col h4 {
+  margin: 0;
+}
+.trend .each-trend .trend-col p {
+  font-size: 9px;
 }
 
 /*# sourceMappingURL=styles.css.map */
