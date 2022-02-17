@@ -344,4 +344,20 @@ header {
   font-size: 9px;
 }
 
+@media (max-width: 1000px) {
+  body {
+    min-height: 100vh;
+    grid-template-rows: clamp(190px, 22vh, 200px) auto;
+  }
+
+  .sub-grid {
+    grid-template-areas: "proj proj side side";
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
